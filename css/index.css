@@ -1,0 +1,307 @@
+:root {
+  --color-darkblue: #00224f;
+  --color-white: #ffffff;
+  --color-gray: #303841;
+  --color-acent: #1c7cd6;
+  /* text */
+  --font-family-normal: "Poppins", sans-serif;
+}
+body {
+  margin: unset;
+  padding: unset;
+  font-family: var(--font-family-normal);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+.container-wrapper {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+h1 {
+  font-size: 5rem;
+}
+h2 {
+  font-size: 4.2rem;
+}
+/* header */
+header {
+  background-color: var(--color-white);
+  font-family: var(--font-family-normal);
+  position: fixed;
+  right: 0;
+  left: 0;
+}
+/* end header */
+/* Navbar */
+#navbar {
+  padding: 10px 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+#navbar ul {
+  display: flex;
+  padding-inline-start: unset;
+}
+#navbar ul li {
+  list-style: none;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+#navbar ul li a {
+  text-decoration: none;
+  color: var(--color-gray);
+}
+#navbar ul li a:hover {
+  color: var(--color-acent);
+}
+/* end navbar */
+/* section */
+#welcome-section {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 212, 255, 0) 100%
+    ),
+    url(https://assets.entrepreneur.com/content/3x2/2000/1593079102-work-731198.jpg);
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+#welcome-section img {
+  border-radius: 50%;
+  box-shadow: 1px 1px 2px black;
+  width: 300px;
+}
+#welcome-section h1 {
+  margin: 0 auto;
+  color: var(--color-white);
+  text-shadow: 1px 1px 2px black;
+}
+#welcome-section > p {
+  font-size: 3rem;
+  font-weight: 200;
+  font-style: italic;
+  color: var(--color-acent);
+  text-shadow: 1px 1px 2px black;
+  margin: 0;
+}
+
+/* end section */
+/* projects section */
+#projects {
+  display: flex;
+  padding: 100px 0;
+}
+#projects .project-tile {
+  background-color: var(--color-gray);
+  width: 320px;
+  float: left;
+  margin: 5px;
+}
+#projects div > h2 {
+  text-align: center;
+  color: var(--color-gray);
+}
+#projects .project-tile > img {
+  width: 320px;
+  height: 230px;
+}
+#projects .project-tile > p {
+  background-color: var(--color-gray);
+  color: var(--color-white);
+  text-align: center;
+}
+/* end projects section */
+
+/* contact section */
+#contacts {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-gray);
+  padding: 100px 0;
+}
+#contacts > h2 {
+  margin: 0 auto;
+  color: var(--color-white);
+}
+#contacts > p {
+  font-size: 2rem;
+  font-weight: 200;
+  font-style: italic;
+  color: var(--color-acent);
+  margin: 20px auto;
+}
+#contacts .socials {
+  color: var(--color-white);
+  margin: 0 auto;
+}
+
+#contacts .socials a {
+  font-size: 22pt;
+  font-family: var(--font-family-normal);
+  text-shadow: 1px 1px 2px black;
+  text-decoration: none;
+  color: var(--color-white);
+  padding: 10px;
+}
+
+.social-icons {
+  color: var(--color-white);
+}
+.social-icons i::before {
+  font-family: "Font Awesome 5 Free", "Font Awesome 5 Brands";
+  margin: 10px;
+}
+.social-icons i::after {
+  font-family: var(--font-family-normal);
+}
+.social-icons i {
+  font-family: var(--font-family-normal);
+  padding: 30px 0;
+  font-weight: bolder;
+}
+.socials a :hover {
+  cursor: pointer;
+  color: var(--color-acent);
+  transform: translateY(8px);
+}
+/* end contact section */
+/* footer */
+footer {
+  display: flex;
+  background-color: var(--color-darkblue);
+  padding: 10px 30px;
+  color: var(--color-white);
+  justify-content: space-between;
+  border-top: var(--color-acent) solid 2px;
+}
+footer .copyright {
+  color: var(--color-acent);
+  margin: 10px auto;
+}
+footer .copyright::before {
+  content: "©";
+}
+/* end footer */
+/* Media queries */
+@media only screen and (min-width: 320px) and (max-width: 639px) {
+  /* header */
+  h2 {
+    padding: 0 20px;
+  }
+  #navbar {
+    justify-content: center;
+  }
+  /* welcome section */
+  #welcome-section {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  #welcome-section img {
+    width: 150px;
+  }
+  #welcome-section h1 {
+    font-size: 2em;
+    text-align: center;
+  }
+  #welcome-section p {
+    font-size: 1.5em;
+    text-align: center;
+  }
+  /* projects */
+  #projects h2 {
+    font-size: 2em;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  #projects  a {
+    display: flex;
+    justify-content: center;
+  }
+  /* contact section */
+  #contacts h2 {
+    font-size: 2em;
+    text-align: center;
+  }
+  #contacts p {
+    font-size: 1.5em;
+    text-align: center;
+  }
+  .socials a i{
+    text-align: center;
+    font-size: 0;
+  }
+  .socials a i::before {
+   font-size: 30px;
+  }
+  #contacts .socials a {
+    padding: 0 2px;
+  }
+}
+
+@media only screen and (min-width: 640px) and (max-width: 912px) {
+  /* nav */
+  #navbar{
+    justify-content: flex-end;
+  }
+  /* welcome section */
+  #welcome-section {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 100px 0;
+  }
+  #welcome-section img {
+    width: 200px;
+  }
+  #welcome-section h1 {
+    font-size: 2.5em;
+    text-align: center;
+  }
+  #welcome-section p {
+    font-size: 2em;
+    text-align: center;
+  }
+  /* projects */
+  #projects  a {
+    display: flex;
+    justify-content: center;
+  }
+  #projects h2 {
+    font-size: 2em;
+    text-align: center;
+  }
+  /* contacts */
+  #contacts h2 {
+    font-size: 2em;
+    text-align: center;
+  }
+  #contacts p {
+    font-size: 1.5em;
+    text-align: center;
+  }
+  .socials a i{
+    text-align: center;
+    font-size: 0;
+  }
+  .socials a i::before {
+   font-size: 30px;
+  }
+  #contacts .socials a {
+    padding: 0 2px;
+  }
+}
+@media only screen and (min-width: 913px) and (max-width: 989px) { 
+/* projects */
+  #projects  a {
+    display: flex;
+    justify-content: center;
+  }
+}
